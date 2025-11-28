@@ -83,7 +83,7 @@ def extract_to_temp(archive_path: Path):
     with tarfile.open(archive_path, "r:gz") as tf:
         tf.extractall(tmpdir)
 
-    # achar a pasta do pacote (ex: Gudan-1.0)
+    
     items = list(tmpdir.iterdir())
     if not items:
         raise FileNotFoundError("empty package")
