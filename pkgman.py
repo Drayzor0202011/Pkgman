@@ -79,7 +79,7 @@ def download_package(pkgname_version: str) -> Path:
 def extract_to_temp(archive_path: Path):
     tmpdir = Path(tempfile.mkdtemp(prefix="pkgman-"))
 
-    # extrai o pacote
+    
     with tarfile.open(archive_path, "r:gz") as tf:
         tf.extractall(tmpdir)
 
